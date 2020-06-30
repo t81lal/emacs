@@ -26,18 +26,6 @@
 (load-file "~/.emacs.d/config/init-face.el")
 (load-file "~/.emacs.d/config/init-general.el")
 (load-file "~/.emacs.d/config/init-editor.el")
+(load-file "~/.emacs.d/config/init-haskell.el")
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (avy undo-tree use-package doom-themes doom-modeline dimmer diminish centaur-tabs all-the-icons-dired))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+(setq custom-file "custom.el")
