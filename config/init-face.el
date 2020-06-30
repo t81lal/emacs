@@ -81,7 +81,7 @@
 
 ;; set global font
 (when (display-graphic-p)
-  (set-frame-font "Menlo-13:antialias=subpixel" nil t)
+  (set-frame-font "Menlo-12:antialias=normal:spacing=m" nil t)
   (mapc 
     (lambda
       (face)
@@ -91,3 +91,8 @@
 ;; ido <3
 (require 'ido)
 (ido-mode t)
+
+(use-package which-key
+  :ensure t
+  :init
+  (which-key-mode))
