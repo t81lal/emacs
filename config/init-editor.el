@@ -1,4 +1,4 @@
-
+;; code/text editor options
 
 ;; use spaces only
 ;; setq-default as ident-tabs-mode is buffer-local
@@ -9,13 +9,7 @@
 (setq require-final-newline t)
 
 ;; use utf8
-(set-charset-priority 'unicode)
-(setq locale-coding-system 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(set-selection-coding-system 'utf-8)
-(prefer-coding-system 'utf-8)
-(setq default-process-coding-system '(utf-8-unix . utf-8-unix))
+(set-language-environment "UTF-8")
 
 ;; typing on a selection replaces it
 (delete-selection-mode t)
