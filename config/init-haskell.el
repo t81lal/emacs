@@ -2,15 +2,11 @@
 
 (require 'use-package)
 
-
+;; use haskell mode
 (use-package haskell-mode
   :ensure t
   :mode ("\\.hs\\'" . haskell-mode)
         ("\\.lhs\\'" . haskell-mode))
-
-(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
-(eval-after-load 'haskell-mode
-  (define-key haskell-interactive-mode-map (kbd "C-j") #'haskell-interactive-mode-history-next))
 
 
 ;; ghcide integration with lsp-haskell ontop of lsp-mode/lsp-ui
@@ -34,3 +30,9 @@
  (setq lsp-haskell-process-args-hie '())
  (setq lsp-log-io t)
 )
+
+
+;; for some reason this doesn't work above
+;; adds simple history for haskell interactive mode
+(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+(define-key haskell-interactive-mode-map (kbd "C-j") #'haskell-interactive-mode-history-next)
