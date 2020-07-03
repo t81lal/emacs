@@ -81,7 +81,7 @@
 
 ;; set global font
 (when (display-graphic-p)
-  (set-frame-font "Menlo-12:antialias=normal:spacing=m" nil t)
+  (set-frame-font "Menlo-11:antialias=normal:spacing=m" nil t)
   (mapc 
     (lambda
       (face)
