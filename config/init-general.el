@@ -1,6 +1,10 @@
-;; misc config elements
+;;; package ---  Miscellaneous configuration elements
 
-(require 'use-package)
+;;; Commentary:
+;; This file contains configuration stuff that I couldn't yet fit into another config file
+;; or that I thought didn't justify it's own file yet.
+
+;;; Code:
 
 (setq
   ;; prompts use minibuffer
@@ -12,3 +16,5 @@
 
 ; y/n instead of yes/no
 (defalias 'yes-or-no-p 'y-or-n-p)
+
+;;; init-general.el ends here
