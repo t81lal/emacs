@@ -23,27 +23,27 @@
   visible-bell t
   ring-bell-function 'ignore)
 
-;; install and load theme
-;;  spacemacs-theme is not a feature, it's just a package so
-;;  there is no autoload and thus :ensure and :config will
-;;  not work here
+;;install and load theme
+;; spacemacs-theme is not a feature, it's just a package so
+;; there is no autoload and thus :ensure and :config will
+;; not work here
 ;;(use-package spacemacs-theme
-;;  :defer t
-;;  :init (load-theme 'spacemacs-dark t)) ;; t here disables confirmation
-;; alternatively: (https://github.com/nashamri/spacemacs-theme/issues/42)
+;; :defer t
+;; :init (load-theme 'spacemacs-dark t)) ;; t here disables confirmation
+;;alternatively: (https://github.com/nashamri/spacemacs-theme/issues/42)
 ;;(use-package spacemacs-common
-;;    :ensure spacemacs-theme
-;;    :config (load-theme 'spacemacs-light t))
+;;   :ensure spacemacs-theme
+;;  :config (load-theme 'spacemacs-light t))
 
 (use-package doom-themes
-  :ensure t
-  :config
-  (let ((chosen-theme 'doom-challenger-deep))
-    (doom-themes-visual-bell-config)
-    (doom-themes-org-config)
-    (setq doom-challenger-deep-brighter-comments t
-          doom-challenger-deep-brighter-modeline t)
-    (load-theme chosen-theme t)))
+:ensure t
+:config
+(let ((chosen-theme 'doom-challenger-deep))
+ (doom-themes-visual-bell-config)
+ (doom-themes-org-config)
+ (setq doom-challenger-deep-brighter-comments t
+       doom-challenger-deep-brighter-modeline t)
+ (load-theme chosen-theme t)))
 
 ;; icons
 ;; this prompts the user to download the fonts if they aren't installed
@@ -67,22 +67,22 @@
 (use-package diminish
   :ensure t
   :config (diminish 'eldoc-mode))
-  
+
 (use-package doom-modeline
   :ensure t
   :config (doom-modeline-mode 1))
-  
+
 (use-package dimmer
   :ensure t
   :custom (dimmer-fraction 0.1)
   :config (dimmer-mode))
-  
+
 (show-paren-mode)
 
 ;; set global font
 (when (display-graphic-p)
   (set-frame-font "Menlo-11:antialias=normal:spacing=m" nil t)
-  (mapc 
+  (mapc
     (lambda
       (face)
       (set-face-attribute face nil :weight 'demibold :underline nil))

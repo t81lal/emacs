@@ -4,7 +4,10 @@
 
 ;; Use package.el to get use-package
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+;; For important compatibility libraries like cl-lib
+(when (< emacs-major-version 24)
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 (package-initialize)
 
 ;; Get use-package
@@ -27,5 +30,6 @@
 (load-file "~/.emacs.d/config/init-general.el")
 (load-file "~/.emacs.d/config/init-editor.el")
 (load-file "~/.emacs.d/config/init-haskell.el")
+(load-file "~/.emacs.d/config/init-org.el")
 
 (setq custom-file "custom.el")
