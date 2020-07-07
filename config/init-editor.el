@@ -1,4 +1,10 @@
-;; code/text editor options
+;;; package --- Code/text editor options
+
+;;; Commentary:
+;; Most of the stuff in this file is commented and pretty self explanatory.
+;; I use Windows a lot, so some stuff such as line ending handling still needs to be done.
+
+;;; Code:
 
 ;; use spaces only
 ;; setq-default as ident-tabs-mode is buffer-local
@@ -30,3 +36,5 @@
 (use-package avy
   :ensure t
   :bind ("C-c l" . avy-goto-line))
+
+;;; init-editor.el ends here
