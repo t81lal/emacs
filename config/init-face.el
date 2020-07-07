@@ -1,5 +1,9 @@
-;; ui/face config elements
+;;; package --- UI/Face configuration
 
+;;; Commentary:
+;; My personal look and feel (LAF) settings, subject to frequent changes.
+
+;;; Code:
 (require 'use-package)
 
 ;; Get rid of splash screen
@@ -96,3 +100,5 @@
   :ensure t
   :init
   (which-key-mode))
+
+;;; init-face.el ends here
