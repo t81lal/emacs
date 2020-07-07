@@ -1,5 +1,10 @@
-;; haskell specific tooling
+;;; package --- Haskell specific packages and tooling
 
+;;; Commentary:
+;; My (very) simple Haskell setup at the moment is to use haskell-mode with the ghcide LSP server
+;; running in the background but I have noticed some weird behaviour so this may change soon.
+
+;;; Code:
 (require 'use-package)
 
 ;; use haskell mode
@@ -36,3 +41,5 @@
 ;; adds simple history for haskell interactive mode
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 (define-key haskell-interactive-mode-map (kbd "C-j") #'haskell-interactive-mode-history-next)
+
+;;; init-haskell.el ends here
