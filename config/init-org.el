@@ -8,9 +8,10 @@
 ;;  4. Scheduling reoccurrences, e.g. Duolingo reminders, break timers, extra curriculars, etc.
 
 ;;; Code:
-
-;;;
 (use-package org-ref
   :ensure t)
+
+;; Line wrapping in org mode
+(add-hook 'org-mode-hook #'toggle-word-wrap)
 
 ;;; init-org.el ends here

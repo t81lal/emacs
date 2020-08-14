@@ -28,7 +28,8 @@
 (eval-when-compile (require 'use-package))
 
 ;; Increase gc threshold to reduce startup pressure
-(setq gc-cons-threshold (* 500 1024 1024))
+(setq gc-cons-threshold 100000000
+      read-process-output-max (* 1024 1024))
 
 ;; TODO: decide if needed
 ;; Set the path variable
@@ -41,6 +42,7 @@
 (load-file "~/.emacs.d/config/init-editor.el")
 (load-file "~/.emacs.d/config/init-haskell.el")
 (load-file "~/.emacs.d/config/init-org.el")
+(load-file "~/.emacs.d/config/init-roam.el")
 
 ;; all of the customize.el configuration code will be redirected to custom.el so as to not
 ;; clutter this file
