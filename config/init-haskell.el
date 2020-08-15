@@ -36,10 +36,4 @@
  (setq lsp-log-io t)
 )
 
-
-;; for some reason this doesn't work above
-;; adds simple history for haskell interactive mode
-(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
-(define-key haskell-interactive-mode-map (kbd "C-j") #'haskell-interactive-mode-history-next)
-
 ;;; init-haskell.el ends here
